@@ -1,268 +1,1061 @@
-<div align="center">
+# 🎲 Doodle Ludo
 
-<a href="docs/video/doodle-ludo-explainer.mp4">
-  <img src="docs/img/thumbnail.jpg" alt="Doodle Ludo - watch the 2-minute explainer" width="720">
-</a>
+### Roll it. Race it. Doodle it.
 
-# Doodle Ludo
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=threedotjs&logoColor=white" alt="Three.js">
+  <img src="https://img.shields.io/badge/WebGL-990000?style=for-the-badge&logo=webgl&logoColor=white" alt="WebGL">
+  <img src="https://img.shields.io/badge/Canvas-FF6F00?style=for-the-badge&logo=html5&logoColor=white" alt="Canvas">
+</p>
 
-**A hand-drawn, 3D Ludo game for 2 to 16 players. Runs in your browser. No backend, no install.**
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Web%20Browser-blue?style=flat-square" alt="Platform">
+  <img src="https://img.shields.io/badge/Game-3D%20Board%20Game-purple?style=flat-square" alt="Game">
+  <img src="https://img.shields.io/badge/Architecture-Single%20HTML%20File-orange?style=flat-square" alt="Architecture">
+  <img src="https://img.shields.io/badge/Game%20Logic-Implemented-success?style=flat-square" alt="Game Logic">
+  <img src="https://img.shields.io/badge/Big%20Board-BETA-yellow?style=flat-square" alt="Big Board Beta">
+  <img src="https://img.shields.io/badge/Online%20Multiplayer-Runtime%20Dependent-lightgrey?style=flat-square" alt="Online Multiplayer">
+</p>
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![CI](https://github.com/YOUR_USERNAME/doodle-ludo/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/doodle-ludo/actions/workflows/ci.yml)
-[![Deploy](https://github.com/YOUR_USERNAME/doodle-ludo/actions/workflows/pages.yml/badge.svg)](https://github.com/YOUR_USERNAME/doodle-ludo/actions/workflows/pages.yml)
-![Three.js](https://img.shields.io/badge/three.js-r128-black?logo=three.js)
-![Vanilla JS](https://img.shields.io/badge/vanilla-JS-F7DF1E?logo=javascript&logoColor=black)
-![Players](https://img.shields.io/badge/players-2%E2%80%9316-e2564c)
-![Backend](https://img.shields.io/badge/backend-none-58b85a)
-![Mobile friendly](https://img.shields.io/badge/mobile-friendly-4a8fd8)
-![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+**Doodle Ludo** is a colorful, hand-drawn 3D interpretation of the classic Ludo board game, built with HTML5, CSS3, JavaScript and Three.js.
 
-[Watch the explainer](docs/video/doodle-ludo-explainer.mp4) · [Play](https://YOUR_USERNAME.github.io/doodle-ludo/) · [How it works](#how-it-works) · [Run locally](#run-it-locally)
+It combines traditional Ludo gameplay with a playful visual identity, interactive 3D graphics, intelligent bot opponents, cooperative team gameplay, experimental large-board matches and online multiplayer functionality.
 
-<img src="docs/img/gameplay.gif" alt="Gameplay: a pawn enters through a portal, a capture with ripples, a pawn reaches home" width="480">
+The goal is to transform a familiar board game into an interactive browser-based experience with expressive animations, custom procedural visual effects, sound design and multiple ways to play.
 
-</div>
+Whether you're competing against AI opponents, teaming up with a partner or experimenting with a giant multiplayer board, Doodle Ludo brings a fresh perspective to a timeless game.
+
+**Doodle Ludo - Roll it. Race it. Doodle it.**
 
 ---
 
-## Why Doodle Ludo?
+## 📑 Table of Contents
 
-Ludo is usually played flat and at four players. This version is a real 3D scene with a hand-drawn look, a rules engine that is tested by simulation, and a board that scales from 2 to 16 players. It is one static page: no accounts, no ads, no server to run.
+- [✨ Features](#-features)
+- [🎮 Game Modes](#-game-modes)
+- [🎲 Classic Ludo Gameplay](#-classic-ludo-gameplay)
+- [🧠 AI Bot Intelligence](#-ai-bot-intelligence)
+- [🎨 Visual Experience](#-visual-experience)
+- [💥 Animation and Battle Effects](#-animation-and-battle-effects)
+- [🔊 Audio System](#-audio-system)
+- [📊 Statistics and Save System](#-statistics-and-save-system)
+- [⚙️ Settings and Accessibility](#️-settings-and-accessibility)
+- [🕹️ Controls](#️-controls)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [🏗️ Project Architecture](#️-project-architecture)
+- [🚀 Getting Started](#-getting-started)
+- [🌐 Online Multiplayer](#-online-multiplayer)
+- [📱 Responsive Design](#-responsive-design)
+- [📂 Project Structure](#-project-structure)
+- [🗺️ Project Status](#️-project-status)
+- [🔮 Future Improvements](#-future-improvements)
+- [🤝 Contributing](#-contributing)
+- [🐛 Bug Reports](#-bug-reports)
+- [📜 License](#-license)
+- [❤️ Acknowledgements](#️-acknowledgements)
 
-## Quickstart
+---
+
+## ✨ Features
+
+Doodle Ludo combines classic board-game mechanics with modern browser-based game development.
+
+### 🎨 1. Hand-Drawn 3D Visual Experience
+
+A playful visual style inspired by doodles, sketchbooks and colorful illustrations.
+
+Features include:
+
+- Interactive 3D Ludo board.
+- Stylized toon-inspired materials.
+- Custom outlines and visual details.
+- Colorful player tokens.
+- Animated dice.
+- Hand-drawn interface elements.
+- Animated menus and buttons.
+- Responsive HUD and player indicators.
+- Camera transitions and board rotation.
+- Custom visual effects and particles.
+
+### 🧠 2. Intelligent AI Opponents
+
+Challenge computer-controlled opponents with different levels of decision-making.
+
+Three difficulty levels are available:
+
+| Difficulty | Behavior |
+|---|---|
+| Easy | More random decisions with occasional strategic moves. |
+| Normal | Evaluates captures, safe squares and token progression. |
+| Hard | Considers opponent threats, defensive positioning and tactical opportunities. |
+
+The bot system evaluates available legal moves and uses different selection strategies according to the chosen difficulty.
+
+### 🎮 3. Multiple Game Modes
+
+Experience Ludo in different ways.
+
+- Classic Mode
+- Co-op Team Mode
+- Big Board Mode (Beta)
+- Online Multiplayer
+
+### 💥 4. Custom Procedural Effects
+
+Doodle Ludo includes a custom procedural animation and visual-effects system.
+
+- Dice animations.
+- Token movement effects.
+- Capture effects.
+- Finishing animations.
+- Particle-based effects.
+- Victory celebrations.
+- Custom battle-effect presets.
+
+### 🔊 5. Procedural Audio
+
+The browser-based audio system includes:
+
+- Dice sounds.
+- Token movement sounds.
+- Capture sounds.
+- Finishing sounds.
+- Interface interaction sounds.
+- Procedurally generated background music.
+- Independent sound and music controls.
+
+### 📊 6. Statistics and Progress
+
+Keep track of your gameplay with built-in statistics.
+
+- Total games played.
+- Total captures.
+- Sixes rolled.
+- Best game by turn count.
+- Current winning streak.
+- Best winning streak.
+- Wins by player color.
+
+### 💾 7. Local Save System
+
+Continue unfinished games without starting over.
+
+- Save the current game state.
+- Restore unfinished matches.
+- Remember player names.
+- Store settings and preferences.
+- Preserve statistics.
+- Reset saved information through the settings menu.
+
+---
+
+## 🎮 Game Modes
+
+### 1. Classic Mode
+
+<kbd>2–4 Players</kbd>
+
+Play the traditional Ludo experience with a combination of human players and AI opponents.
+
+**Features:**
+
+- Supports 2–4 players.
+- Four tokens per player.
+- Custom player names.
+- Human and bot player selection.
+- Enable or disable individual seats.
+- Three bot difficulty levels.
+- Automatic turn management.
+- Traditional Ludo rules.
+
+Players can configure their seats before starting a match.
+
+### 2. Co-op Team Mode
+
+<kbd>2 Teams · 4 Players</kbd>
+
+Why compete against everyone when you can work together?
+
+Co-op mode introduces cooperative gameplay.
+
+**Team configuration:**
+
+| Team | Players |
+|---|---|
+| Team 1 | 🔴 Red + 🟡 Yellow |
+| Team 2 | 🟢 Green + 🔵 Blue |
+
+**Features:**
+
+- Two teams compete against each other.
+- Teammates can move each other's tokens.
+- Teammates cannot capture each other.
+- Shared team strategy.
+- Eight tokens per team.
+- First team to bring all eight tokens home wins.
+
+Co-op mode can be played locally by sharing the same device or through the supported online multiplayer functionality.
+
+### 3. Big Board Mode - BETA
+
+<kbd>2–16 Players</kbd> <kbd>Experimental</kbd>
+
+Take the traditional Ludo experience and expand it into a giant circular board.
+
+Big Board is an experimental mode designed to support more players than the standard four-player board.
+
+**Features:**
+
+- Supports 2–16 players.
+- Extended circular game track.
+- Configurable human player count.
+- Remaining seats controlled by bots.
+- Customizable player names.
+- Expanded token and player management.
+- Shared game mechanics with the standard Ludo experience.
+
+**Experimental limitations:**
+
+- Big Board is currently marked as Beta.
+- Co-op mode is unavailable while Big Board is enabled.
+- Some gameplay behavior and extended-board interactions may need additional refinement.
+
+### 4. Online Multiplayer
+
+<kbd>Online Co-op</kbd> <kbd>Private Rooms</kbd>
+
+Play cooperative online matches with other players through supported multiplayer services.
+
+**Features:**
+
+- Quick match.
+- Private room creation.
+- Five-character room codes.
+- Join existing rooms.
+- Live player lobby.
+- Real-time game-state synchronization.
+- Bot-controlled empty seats.
+- Online leaderboard.
+- Automatic bot takeover for inactive players.
+
+Online matches use the cooperative Red + Yellow versus Green + Blue team format.
+
+**Important:** Online multiplayer currently depends on the compatible Claude.ai runtime, including its `window.claude` database and user services. It requires an authenticated session and suitable Contributor permissions. The feature is not independently deployable through ordinary GitHub Pages hosting without a compatible backend implementation.
+
+---
+
+## 🎲 Classic Ludo Gameplay
+
+Doodle Ludo implements the familiar rules of traditional Ludo.
+
+### Game Objective
+
+Move all four of your tokens around the board and bring them safely into the center.
+
+The first player to finish all four tokens wins the game.
+
+### Game Rules
+
+| Rule | Description |
+|---|---|
+| Leaving the yard | Roll a 6 to bring a token onto its starting square. |
+| Movement | Tokens move according to the dice result. |
+| Safe squares | Start squares and star squares protect tokens. |
+| Capture | Land on a single unprotected opponent token to send it back to its yard. |
+| Token walls | Two tokens stacked together form a wall. |
+| Extra turn | Rolling a 6 grants another turn. |
+| Capture bonus | Capturing an opponent grants another turn. |
+| Finishing bonus | Bringing a token home grants another turn. |
+| Three consecutive sixes | The turn is forfeited. |
+| Exact finish | An exact dice roll is required to reach the center. |
+
+### Winning Conditions
+
+**Classic Mode:** A player must bring all four tokens home.
+
+**Co-op Mode:** A team must bring all eight combined tokens home.
+
+**Big Board:** The game follows the extended-board finish-order logic.
+
+---
+
+## 🧠 AI Bot Intelligence
+
+The AI system is built around evaluating available legal moves and selecting a move based on the configured difficulty.
+
+### Easy AI
+
+A less predictable opponent.
+
+- Introduces more random decisions.
+- Occasionally prioritizes finishing tokens.
+- Occasionally selects capture opportunities.
+- Provides a more relaxed challenge.
+
+### Normal AI
+
+A more tactical opponent.
+
+- Prioritizes finishing moves.
+- Evaluates capture opportunities.
+- Considers safe landing positions.
+- Rewards token progression.
+- Applies basic threat awareness.
+
+### Hard AI
+
+A more defensive and strategic opponent.
+
+- Evaluates possible opponent captures.
+- Considers token vulnerability.
+- Rewards safer movement.
+- Looks for opportunities to threaten opponents.
+- Uses additional tactical scoring.
+
+### AI Move Evaluation
+
+The bot considers several factors:
+
+| Evaluation Factor | Purpose |
+|---|---|
+| Finishing | Prioritize completing a token. |
+| Captures | Reward capturing opponents. |
+| Entering the board | Encourage bringing tokens out of the yard. |
+| Safe landing | Reward protected positions. |
+| Progression | Encourage advancing tokens. |
+| Threat awareness | Reduce exposure to opponent captures. |
+
+The AI is rule-based rather than powered by a machine-learning model.
+
+---
+
+## 🎨 Visual Experience
+
+Doodle Ludo uses Three.js to create an interactive 3D environment.
+
+### Rendering Features
+
+- Three-dimensional board geometry.
+- Perspective camera.
+- Animated dice.
+- 3D token models.
+- Custom materials.
+- Stylized lighting.
+- Outlines and toon-inspired shading.
+- Dynamic board positioning.
+- Automatic resizing.
+- Interactive camera controls.
+
+### Visual Style
+
+The visual identity combines:
+
+- Sketchbook-inspired styling.
+- Warm paper-like backgrounds.
+- Playful typography.
+- Colorful game pieces.
+- Hand-drawn interface elements.
+- Animated visual feedback.
+
+The intention is to preserve the casual feeling of a traditional board game while making the presentation feel modern and interactive.
+
+---
+
+## 💥 Animation and Battle Effects
+
+The project includes a custom procedural effects library named **PixelFX**.
+
+It provides reusable animation and particle-effect utilities.
+
+### Animation Categories
+
+- Token movement.
+- Dice rolling.
+- Token capture.
+- Token finishing.
+- Victory celebration.
+- Interface transitions.
+- Board interaction feedback.
+
+### PixelFX Effects
+
+The embedded PixelFX system includes utilities for effects such as:
+
+- Firework bursts.
+- Hit sparks.
+- Explosions.
+- Particle bursts.
+- Magic circles.
+- Lightning.
+- Star effects.
+- Fire rings.
+- Heavy impacts.
+- Confetti.
+- Portal effects.
+- Shield effects.
+- Ground and dirt explosions.
+
+The system supports procedural rendering and reusable effect configurations.
+
+### Battle Effect Presets
+
+| Setting | Description |
+|---|---|
+| Off | Disables additional battle effects. |
+| Normal | Enables regular visual effects. |
+| Epic | Enables stronger visual effects. |
+
+Battle effects can also be changed while playing.
+
+---
+
+## 🔊 Audio System
+
+The game includes a procedural browser-based audio system using the Web Audio API.
+
+### Sound Effects
+
+- Button clicks.
+- Dice shaking.
+- Dice landing.
+- Moving tokens.
+- Entering the board.
+- Capturing tokens.
+- Finishing tokens.
+- Safe landing.
+- Gameplay feedback.
+
+### Background Music
+
+The audio system includes procedurally generated music.
+
+### Audio Controls
+
+- Enable or disable sound effects.
+- Enable or disable background music.
+- Adjust audio behavior through the audio subsystem.
+- Save audio preferences locally.
+
+Audio initialization follows browser interaction and autoplay requirements.
+
+---
+
+## 📊 Statistics and Save System
+
+Doodle Ludo provides local gameplay statistics and save functionality.
+
+### Available Statistics
+
+| Statistic | Description |
+|---|---|
+| Games | Total games played. |
+| Captures | Total opponent tokens captured. |
+| Sixes | Total sixes rolled. |
+| Best Game | Best game measured by turn count. |
+| Win Streak | Current consecutive winning streak. |
+| Best Streak | Highest recorded winning streak. |
+| Wins by Color | Individual wins for each color. |
+
+### Local Save System
+
+The game uses browser `localStorage` to store:
+
+- Unfinished game state.
+- Player settings.
+- Player names.
+- Gameplay statistics.
+- Audio preferences.
+
+The Continue option becomes available when an unfinished local game is saved.
+
+The reset option allows users to clear stored game data, settings and statistics.
+
+---
+
+## ⚙️ Settings and Accessibility
+
+Doodle Ludo includes customizable gameplay and accessibility options.
+
+| Setting | Available Options |
+|---|---|
+| Sound Effects | On / Off |
+| Music | On / Off |
+| Bot Difficulty | Easy / Normal / Hard |
+| Bot Speed | Slow / Normal / Fast |
+| Rotate Board | Auto / Each Turn / Off |
+| Battle Effects | Off / Normal / Epic |
+| Colorblind Symbols | On / Off |
+| Reduced Motion | On / Off |
+
+### Accessibility Features
+
+- Colorblind symbols alongside player colors.
+- Reduced-motion setting.
+- Keyboard dice interaction.
+- Accessible labels for interactive controls.
+- Responsive menus and controls.
+- Keyboard focus indicators.
+
+The application also respects the operating system's reduced-motion preference.
+
+---
+
+## 🕹️ Controls
+
+### Mouse and Touch
+
+| Action | Control |
+|---|---|
+| Roll Dice | Tap or click anywhere on the board |
+| Move Token | Tap or click a highlighted token |
+| Pan Board | Drag |
+| Zoom In / Out | Mouse wheel or pinch gesture |
+| Pause Game | Pause button |
+
+### Keyboard
+
+| Key | Action |
+|---|---|
+| Space | Roll the dice |
+
+### Gameplay Tips
+
+- Look for highlighted tokens after rolling.
+- Use safe squares to protect your pieces.
+- Watch for opponents approaching your tokens.
+- Use extra turns strategically.
+- Coordinate with your teammate in Co-op mode.
+
+---
+
+## 🛠️ Technology Stack
+
+Doodle Ludo is built using browser-native technologies and the Three.js ecosystem.
+
+| Technology | Purpose |
+|---|---|
+| HTML5 | Application structure |
+| CSS3 | Responsive interface and styling |
+| JavaScript | Gameplay logic and interactions |
+| Three.js | 3D scene rendering |
+| WebGL | Hardware-accelerated rendering |
+| Canvas | Custom drawing, textures and effects |
+| Web Audio API | Procedural sound and music |
+| Local Storage | Local save and settings persistence |
+| Pointer Events | Mouse and touchscreen input |
+| Google Fonts | Handwritten typography |
+
+### External Dependencies
+
+The supplied HTML currently loads:
+
+**Three.js r128**
+
+`https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js`
+
+**Google Fonts**
+
+- Gochi Hand
+- Patrick Hand
+
+The game also includes its procedural PixelFX implementation directly in the HTML file.
+
+---
+
+## 🏗️ Project Architecture
+
+Although distributed as a single HTML file, Doodle Ludo is organized into logical JavaScript subsystems.
+
+### 1. LudoGame.Logic
+
+Responsible for the core gameplay system.
+
+- Initialize game states.
+- Manage players and tokens.
+- Generate dice results.
+- Calculate legal moves.
+- Handle token movement.
+- Handle captures.
+- Check winning conditions.
+- Manage turn progression.
+- Calculate AI bot decisions.
+- Generate extended-board layouts.
+
+### 2. LudoGame.Scene
+
+Responsible for the 3D experience.
+
+- Three.js scene initialization.
+- Camera management.
+- Board construction.
+- Token rendering.
+- Dice rendering.
+- Input handling.
+- Token movement animations.
+- Board interaction.
+- Resize handling.
+- Rendering lifecycle.
+
+### 3. LudoGame.UI
+
+Responsible for the user interface.
+
+- Main menu.
+- Game setup.
+- Player management.
+- Game HUD.
+- Pause menu.
+- Settings.
+- Game rules.
+- Statistics.
+- Game-over screen.
+- Notifications and interaction feedback.
+
+### 4. LudoGame.Storage
+
+Responsible for local persistence.
+
+- Save unfinished games.
+- Restore previous games.
+- Store settings.
+- Store statistics.
+- Manage player names.
+- Reset saved data.
+
+### 5. LudoGame.Audio
+
+Responsible for browser audio.
+
+- Procedural sound effects.
+- Background music.
+- Audio initialization.
+- Sound controls.
+- Music controls.
+- Audio preference persistence.
+
+### 6. LudoGame.Net
+
+Responsible for online multiplayer functionality.
+
+- User and database service integration.
+- Quick matchmaking.
+- Private room creation.
+- Room-code joining.
+- Player seat management.
+- Live game-state synchronization.
+- Online leaderboard.
+- Inactive-player bot takeover.
+
+### 7. LudoGame.Style
+
+Responsible for visual styling enhancements.
+
+- Shader uniforms.
+- Rendering parameters.
+- Pixel-ratio management.
+- Lighting configuration.
+- Stylized rendering.
+
+### 8. PixelFX
+
+Responsible for procedural visual effects.
+
+- Particle systems.
+- Animation utilities.
+- Visual effect generators.
+- Explosions and impacts.
+- Fireworks and celebrations.
+- Reusable effect configurations.
+
+---
+
+## 🚀 Getting Started
+
+Getting started is straightforward because the current game is distributed as a single HTML file.
+
+### Prerequisites
+
+- Modern web browser.
+- JavaScript enabled.
+- WebGL-compatible graphics support.
+- Internet connection for the external Three.js library and Google Fonts.
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/doodle-ludo.git
-cd doodle-ludo
-npm run serve        # builds, then serves http://localhost:8080
 ```
 
-Open the page, press **Play**, then **Start game**. Tap anywhere to roll. (Needs Node 18+ and a browser with WebGL.)
+### 2. Navigate to the Project
 
-## About
+```bash
+cd doodle-ludo
+```
 
-Doodle Ludo is the classic race-and-capture board game drawn like a doodle on notebook paper, and rendered in real 3D with [Three.js](https://threejs.org/). Pieces are cel-shaded with wobbly ink outlines, the whole scene sits under a paper texture, and every pawn has a face that reacts to what happens on the board.
+### 3. Prepare the HTML File
 
-It is a single static page: **frontend only**, with settings, stats and saved games in `localStorage`.
+Rename the supplied game file to:
 
-> Suggested GitHub "About" text: *Hand-drawn 3D Ludo for 2-16 players in the browser. Three.js, pawn expressions, optional pixel-art battle effects, co-op teams, no backend.*
+```text
+index.html
+```
 
-## Features
+### 4. Run the Game
 
-| | |
+Open `index.html` in your browser.
+
+For local static hosting, you can also use Python:
+
+```bash
+python -m http.server 8000
+```
+
+Open:
+
+```text
+http://localhost:8000
+```
+
+### 5. Start Playing
+
+- Select Play.
+- Configure your players.
+- Select a game mode.
+- Choose bot difficulty.
+- Start your match.
+
+No separate frontend build process or npm installation is needed for the current standalone local gameplay.
+
+---
+
+## 🌐 Online Multiplayer
+
+The online subsystem currently provides cooperative online gameplay.
+
+### Available Functionality
+
+- Quick match.
+- Private rooms.
+- Five-character room codes.
+- Player lobby.
+- Online game-state synchronization.
+- Bot-filled empty seats.
+- Online leaderboard.
+
+### Online Requirements
+
+Online gameplay uses the host environment's services through:
+
+```javascript
+window.claude.use('db')
+window.claude.use('user')
+```
+
+It requires:
+
+- A compatible runtime.
+- A signed-in user.
+- Database access.
+- Appropriate Contributor permissions for players.
+
+### GitHub Pages Compatibility
+
+The standalone local game can be hosted on GitHub Pages.
+
+However, the existing online multiplayer system is not a self-contained backend and does not automatically work on GitHub Pages.
+
+An independent backend and appropriate real-time synchronization service would be required to make online multiplayer portable to standard hosting environments.
+
+---
+
+## 📱 Responsive Design
+
+Doodle Ludo includes responsive UI and canvas rendering behavior.
+
+### Responsive Features
+
+- Flexible menu layouts.
+- Viewport-aware game interface.
+- Touch-friendly controls.
+- Mobile-oriented safe-area handling.
+- Mouse and touch interaction.
+- Responsive canvas resizing.
+- Camera adjustment based on screen dimensions.
+- Device-pixel-ratio management.
+
+### Rendering Considerations
+
+The Three.js renderer uses:
+
+- Antialiasing.
+- High-performance power preference.
+- A capped device pixel ratio.
+- Resize and orientation listeners.
+- ResizeObserver support where available.
+
+Actual rendering performance depends on the user's browser, device, GPU and display resolution.
+
+---
+
+## 📂 Project Structure
+
+The current implementation is packaged as a single HTML application.
+
+```text
+doodle-ludo/
+│
+├── index.html
+│
+└── README.md
+```
+
+The HTML file contains the application markup, styles and JavaScript systems.
+
+Internally, the JavaScript is organized into logical components:
+
+```text
+Doodle Ludo
+│
+├── Application
+│
+├── LudoGame
+│   │
+│   ├── Logic
+│   │   ├── Game State
+│   │   ├── Dice System
+│   │   ├── Legal Moves
+│   │   ├── Token Movement
+│   │   ├── Captures
+│   │   └── AI Bot Decisions
+│   │
+│   ├── Scene
+│   │   ├── Three.js Renderer
+│   │   ├── Board
+│   │   ├── Tokens
+│   │   ├── Dice
+│   │   ├── Camera
+│   │   └── Animations
+│   │
+│   ├── UI
+│   │   ├── Main Menu
+│   │   ├── Game Setup
+│   │   ├── HUD
+│   │   ├── Settings
+│   │   ├── Statistics
+│   │   └── Game Over
+│   │
+│   ├── Storage
+│   │
+│   ├── Audio
+│   │
+│   ├── Net
+│   │
+│   └── Style
+│
+└── PixelFX
+    ├── Particle Systems
+    ├── Animation Utilities
+    └── Visual Effects
+```
+
+This diagram represents the logical architecture, not separate files.
+
+---
+
+## 🗺️ Project Status
+
+| Feature | Status |
 |---|---|
-| **Doodle look** | Cel-shaded toon materials, inverted-hull ink outlines, paper texture and a post-processing pass. |
-| **Classic rules** | 15x15 board, 4 pawns each. Roll a 6 to leave the yard, capture rivals, stars are safe, a 6 gives an extra turn, three 6s in a row forfeit the turn, and you need an exact roll to finish. |
-| **2-4 players** | Any seat can be Human, Bot or Off. Bots come in Easy, Normal and Hard. |
-| **Co-op teams** | Red + Yellow against Green + Blue. Teammates never capture each other, any roll can move your own or your partner's pawn, and a team wins with all 8 pawns home. |
-| **Big board (beta)** | A star-shaped board that scales from **2 to 16 players**, one coloured arm per player. |
-| **Tap anywhere to roll** | Tap or click anywhere on the board to roll, or press Space. |
-| **Board follows the turn** | The camera turns to face the current seat. Choose Auto, Each turn or Off in Settings. |
-| **Pawn expressions** | Pawns look where they are going, cheer when a teammate scores, get angry when they attack, and get scared, dizzy and sad when captured. |
-| **Battle effects (opt-in)** | Pixel-art effects from [pixelfx](https://github.com/patch-gg/pixelfx) drawn as planes lying in the board's own 3D space: portals when a pawn leaves the yard, dust on landings, "BONK!" captures, fireworks on a win. **Off by default.** |
-| **FX Epic level** | Adds force ripples on the board, screen flashes, hit-stop slow motion and extra effects. |
-| **Mobile first** | Responsive menus and HUD, touch drag to pan, pinch to zoom. |
-| **Accessible** | Colour-blind symbols on every colour, a Reduced motion setting that turns all effects off, large tap targets. |
-| **Sound** | WebAudio effects and music generated in code. There are no audio files. |
-| **Online play** | Quick match, private room codes and a leaderboard. See the [note on hosting](#online-play-and-hosting). |
+| Classic Ludo Gameplay | ✅ Implemented |
+| 2–4 Player Setup | ✅ Implemented |
+| Human and Bot Players | ✅ Implemented |
+| Easy AI | ✅ Implemented |
+| Normal AI | ✅ Implemented |
+| Hard AI | ✅ Implemented |
+| Co-op Team Mode | ✅ Implemented |
+| Big Board Mode | 🟡 Beta |
+| 2–16 Player Big Board | 🟡 Experimental |
+| 3D Board Rendering | ✅ Implemented |
+| Animated Dice | ✅ Implemented |
+| Token Animations | ✅ Implemented |
+| PixelFX System | ✅ Implemented |
+| Procedural Audio | ✅ Implemented |
+| Background Music | ✅ Implemented |
+| Local Save System | ✅ Implemented |
+| Statistics | ✅ Implemented |
+| Accessibility Options | ✅ Implemented |
+| Online Multiplayer | ⚙️ Runtime-dependent |
+| Private Online Rooms | ⚙️ Runtime-dependent |
+| Online Leaderboard | ⚙️ Runtime-dependent |
+| Independent Multiplayer Hosting | 🔮 Future Improvement |
 
-## Screenshots
+**Legend**
 
-<table>
-  <tr>
-    <td><img src="docs/img/title.jpg" alt="Title screen"></td>
-    <td><img src="docs/img/setup.jpg" alt="Setup screen"></td>
-  </tr>
-  <tr>
-    <td><img src="docs/img/board.jpg" alt="Classic board"></td>
-    <td><img src="docs/img/pawn-faces.jpg" alt="Pawn expressions and a BONK effect"></td>
-  </tr>
-  <tr>
-    <td><img src="docs/img/big-board-12.jpg" alt="Big board with 12 players"></td>
-    <td><img src="docs/img/big-board-16.jpg" alt="Big board with 16 players"></td>
-  </tr>
-  <tr>
-    <td><img src="docs/img/coop.jpg" alt="Co-op team setup"></td>
-    <td><img src="docs/img/settings.jpg" alt="Settings with Battle effects Off / On / Epic"></td>
-  </tr>
-</table>
+- ✅ Implemented in the supplied source.
+- 🟡 Beta or experimental.
+- ⚙️ Requires a compatible runtime or service.
+- 🔮 Potential future improvement.
+
+---
+
+## 🔮 Future Improvements
+
+Doodle Ludo is an evolving browser-game project.
+
+Potential areas of development include:
+
+### Gameplay
+
+- Further refine Big Board gameplay.
+- Introduce additional board variations.
+- Add new gameplay challenges.
+- Improve multiplayer room management.
+- Expand player customization.
+
+### AI
+
+- Improve bot decision-making.
+- Introduce more advanced tactical evaluation.
+- Improve strategic cooperation between team bots.
+- Add additional AI difficulty profiles.
+
+### Visuals
+
+- Additional board themes.
+- Custom token skins.
+- More animation variations.
+- Additional particle effects.
+- Improved victory celebrations.
+- Expanded visual customization.
+
+### Performance
+
+- Optimize rendering on lower-end hardware.
+- Improve mobile GPU performance.
+- Reduce unnecessary rendering work.
+- Improve memory management.
+- Optimize visual-effect workloads.
+
+### Multiplayer
+
+- Develop an independent multiplayer backend.
+- Improve room lifecycle management.
+- Expand matchmaking.
+- Improve connection recovery.
+- Add more multiplayer options.
+
+### Testing and Reliability
+
+- Add automated game-logic tests.
+- Expand edge-case testing.
+- Validate extended-board interactions.
+- Improve accessibility testing.
+- Test across browsers and devices.
+
+---
+
+## 🤝 Contributing
+
+Contributions and suggestions are welcome!
+
+Doodle Ludo is a project where game development, interactive design, 3D rendering and JavaScript come together.
+
+You can contribute through:
+
+- Improving gameplay mechanics.
+- Improving bot intelligence.
+- Optimizing Three.js rendering.
+- Improving mobile performance.
+- Enhancing accessibility.
+- Creating additional visual effects.
+- Improving the UI and UX.
+- Fixing bugs.
+- Suggesting new game modes.
+
+### Contribution Workflow
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Test your implementation.
+5. Commit your changes.
+6. Open a pull request.
+
+Example:
+
+```bash
+git checkout -b feature/new-game-mode
+```
+
+Commit your changes:
+
+```bash
+git add .
+git commit -m "Add new game mode"
+git push origin feature/new-game-mode
+```
+
+Then create a pull request with a description of your changes.
+
+---
+
+## 🐛 Bug Reports
+
+Found an issue?
+
+Please create a GitHub Issue with:
+
+- A clear description of the problem.
+- Steps to reproduce it.
+- Expected behavior.
+- Actual behavior.
+- Browser and device details.
+- Screenshots or screen recordings, when available.
+
+For performance problems, include hardware and browser information where possible.
+
+---
+
+## 📜 License
+
+No license has been specified in the supplied project source.
+
+A license should be added to the repository before granting permissions for public reuse, modification or redistribution.
+
+---
+
+## ❤️ Acknowledgements
+
+Doodle Ludo is built using browser-based technologies and the open-source development ecosystem.
+
+Special appreciation to:
+
+- [Three.js](https://threejs.org/) - 3D graphics library.
+- [MDN Web Docs](https://developer.mozilla.org/) - Web development documentation.
+- [WebGL](https://www.khronos.org/webgl/) - Browser graphics technology.
+- [Google Fonts](https://fonts.google.com/) - Typography resources.
+
+---
+
+## 🎲 Final Words
+
+A familiar board game. A different visual experience. Countless dice rolls.
+
+Doodle Ludo brings together traditional gameplay, AI opponents, cooperative strategy, procedural animations and interactive 3D graphics in a browser-based project.
+
+Built with creativity, experimentation and a passion for game development.
+
+**Roll it. Race it. Doodle it.**
+
+⭐ If you enjoy the project, consider giving the repository a star and sharing your feedback!
+
+---
 
 <p align="center">
-  <img src="docs/img/mobile-title.jpg" alt="Mobile menu" height="420">
-  <img src="docs/img/mobile-game.jpg" alt="Mobile game" height="420">
+  <strong>🎲 DOODLE LUDO</strong>
+  <br>
+  <em>Roll it. Race it. Doodle it.</em>
 </p>
-
-## Video
-
-[![Doodle Ludo explainer](docs/img/thumbnail.jpg)](docs/video/doodle-ludo-explainer.mp4)
-
-A 2-minute narrated walkthrough of every feature, captured from the game itself. Click the thumbnail to play it. The video is in [`docs/video/`](docs/video/doodle-ludo-explainer.mp4) and the scripts that made it are in [`tools/video`](tools/video).
-
-<!--
-INLINE PLAYER (optional, no file stored in the repo):
-1. On GitHub click the pencil to edit this README.
-2. Drag docs/video/doodle-ludo-explainer.mp4 into the editor. GitHub uploads it and pastes a
-   https://github.com/user-attachments/assets/... link (free plan: max 10 MB, paid: 100 MB).
-3. Put that link on its own line here, and it renders as a player. Then you can delete docs/video/.
-
-YOUTUBE ALTERNATIVE (no file in the repo, no size limit):
-[![Watch](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://youtu.be/YOUR_VIDEO_ID)
--->
-
-## How to play
-
-1. Press **Play**, choose who sits in each seat, and press **Start game**.
-2. **Tap anywhere** (or press Space) to roll the dice.
-3. A **6** brings a pawn out of the yard onto your start square and gives you another roll.
-4. Land on a rival pawn on a normal square to send it back to its yard. Pawns on the stars and start squares are **safe**.
-5. Walk all four pawns around the board and into the centre. You need the **exact** roll to finish.
-6. Three 6s in a row forfeit your turn.
-
-**Controls:** tap/click to roll or pick a pawn, drag to pan, pinch or mouse wheel to zoom, Space to roll, the **FX** button in the HUD to cycle effects Off / On / Epic.
-
-### Battle effects
-
-Effects are **off every time the game starts**. Turn them on from the **FX** button in the HUD or from **Settings > Battle effects**.
-
-| Level | What you get |
-|---|---|
-| **Off** | No effects, no dust, no particles, no screen shake. |
-| **On** | Portals, landing dust, hit sparks, damage numbers, capture pops, power stars, win fireworks. |
-| **Epic** | Everything above plus force ripples, screen flashes, hit-stop slow motion, sword slashes, fire rings, flame pillars, a big win explosion and more. |
-
-The effects are depth-tested inside the 3D scene: floor effects lie flat on the board, bursts stand on the ground and are hidden by pieces in front of them, and bursts cast a soft shadow on the board.
-
-## How it works
-
-```
-src/
-  logic.js          rules engine (pure JS, no DOM)
-  style.js          doodle look: toon materials, ink outlines, paper texture, post-FX
-  scene.js          Three.js scene: boards, pawns, dice, camera, tweens, expressions
-  battle.js         battle effects: pixelfx planes + procedural ripples and flashes
-  audio.js          WebAudio sound and music, plus particle bursts (Juice)
-  ui.js / ui.css    menus, HUD, settings, dialogs
-  net.js            online lobby, quick match, rooms, leaderboard
-  main.js           game controller
-  pixelfx.bundle.js bundled pixelfx effects (built from tools/fxbuild)
-test/logic.test.js  rules engine tests
-build.js            concatenates src/ into one dist/index.html
-tools/              asset and video tooling (not needed to run the game)
-```
-
-- **Plain-JS modules.** Each file is an IIFE that registers on `window.LudoGame`. `build.js` concatenates them into one self-contained HTML file. Three.js r128 loads from a CDN.
-- **Rules engine.** `logic.js` is pure and deterministic given a die value, so it is tested without a browser. Positions are encoded as `-1` yard, `0..ring-2` track, then a 5-cell home column, then `fin`. The classic ring is 52 cells; the big board uses `ring = 13 x players`.
-- **Big board.** `Logic.layout(n)` generates an N-arm star for any N from 2 to 16.
-- **Camera.** The camera azimuth (`yaw`) eases towards the current seat. Modes are `turn`, `seat` and `fixed`.
-- **Expressions.** Pawn faces are small meshes toggled from a table of expressions. Gaze and speech bubbles react to game events.
-- **Effects.** pixelfx renders pixel frames to a canvas, which becomes a `CanvasTexture` on a plane with nearest-neighbour filtering. Planes are depth-tested, so they sit inside the scene. The setting `battle` (`off` | `normal` | `epic`) gates every effect and every particle, and it is reset to `off` on each launch.
-- **Persistence.** Settings, stats and the saved game live in `localStorage`.
-
-
-### Game flow (renders natively on GitHub, no image file)
-
-```mermaid
-flowchart LR
-  A([Roll]) --> B{Rolled a 6?}
-  B -- yes --> C[Leave the yard or move 6]
-  B -- no --> D[Move a pawn]
-  C --> E{Landed on a rival?}
-  D --> E
-  E -- yes, not on a star --> F[Capture: rival returns to its yard]
-  E -- no --> G{All pawns home?}
-  F --> G
-  G -- yes --> H([Win])
-  G -- no --> I{Rolled a 6?}
-  I -- yes, under 3 in a row --> A
-  I -- no --> J([Next player])
-  J --> A
-```
-
-### The board in a code block
-
-```
-        GREEN yard      | yellow lane |   YELLOW yard
-       (o)   (o)        |  . . .      |   (o)   (o)
-       (o)   (o)        |  . Y Y      |   (o)   (o)
-   ---------------------+-------------+---------------------
-    . G G G G G         |    *HOME*   |         B B B B B .
-   ---------------------+-------------+---------------------
-        RED yard        |  . R R      |    BLUE yard
-       (o)   (o)        |  . . .      |   (o)   (o)
-       (o)   (o)        |  roll here  |   (o)   (o)
-```
-
-### Tests
-
-```bash
-npm test
-```
-
-Plays 500 classic games, 30 games for every player count from 2 to 16 on the big board, and 60 co-op games with random bots, asserting the rules engine's invariants along the way.
-
-## Run it locally
-
-You only need Node 18+ to build. There are no runtime dependencies.
-
-```bash
-git clone https://github.com/YOUR_USERNAME/doodle-ludo.git
-cd doodle-ludo
-npm test           # rules engine tests
-npm run build      # writes dist/index.html
-npm run serve      # builds and serves dist/ on http://localhost:8080
-```
-
-`dist/index.html` is a single file. You can also open it directly in a browser.
-
-To rebuild the bundled effects after editing `tools/fxbuild/entry.js` (this needs a local clone of [pixelfx](https://github.com/patch-gg/pixelfx); edit the import paths in `entry.js` to point at it):
-
-```bash
-npm run build:fx
-```
-
-## Deploy
-
-Push to `main` and the included workflow (`.github/workflows/pages.yml`) builds and publishes `dist/` to **GitHub Pages**. Enable it once under *Settings > Pages > Source: GitHub Actions*.
-
-## Online play and hosting
-
-Online play (quick match, private rooms, leaderboard) uses the shared database and sign-in that the **Claude Artifacts** runtime provides (`window.claude`). That means:
-
-- When the page is hosted as a **Claude Artifact**, online play works for viewers with write access.
-- When it is hosted on GitHub Pages or any other static host, **single-device play, co-op, the big board, effects and mobile all work, but online play shows a "needs a signed-in claude.ai viewer" message.**
-- Online play was tested against a mock database, not against two real players.
-
-To run online play on your own host, replace the storage calls in `src/net.js` with your own backend (the file isolates them behind a small set of read, write, watch and acquire helpers).
-
-## Known limitations
-
-- Online play is only exercised against a mock, as described above.
-- The beta big board outline is a little blobby.
-- On boards with six or more players the pawns do not have faces.
-- The 16-player board is playable but its frame rate on low-end devices has not been measured.
-- Epic explosions leave some dark smoke.
-
-## Roadmap
-
-- [ ] A pluggable backend for online rooms (WebSocket or WebRTC) so it works on any host
-- [ ] Faces on big-board pawns
-- [ ] Replay and undo
-- [ ] More board themes (crayon, chalkboard, graph paper)
-- [ ] Daily challenge and shareable seeds
-- [ ] PWA install and offline mode
-
-## Credits
-
-- [Three.js](https://threejs.org/) (MIT) for rendering.
-- [pixelfx](https://github.com/patch-gg/pixelfx) (MIT) for the pixel-art battle effects.
-- [coop-anything](https://github.com/cranebeaker/coop-anything) by cranebeaker, the inspiration for the co-op mode.
-- [claude-animation-skills](https://github.com/artemnovitckii/claude-animation-skills) and [claude-code-video-toolkit](https://github.com/digitalsamba/claude-code-video-toolkit) for the ideas behind the explainer video (impact bursts, whip cuts, audio-anchored timing, burned-in captions).
-- [Kokoro](https://github.com/thewh1teagle/kokoro-onnx) text-to-speech for the video narration.
-- Fonts: Patrick Hand and Gochi Hand (Google Fonts, OFL), Poppins (OFL, video only).
-
-Built with [Claude Code](https://claude.com/claude-code).
-
-## License
-
-[MIT](LICENSE). The bundled pixelfx and Three.js code keep their own MIT licenses.
